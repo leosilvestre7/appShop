@@ -2,10 +2,10 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class ProductService {
-    private data: any;
+    public data: Array<string> = [];
 
-    agregar(parameter: string) {
-        this.data.push(parameter);
+    agregar(demo: string) {
+        this.data.push(demo);
     }
 
     buscar() {

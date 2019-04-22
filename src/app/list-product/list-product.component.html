@@ -5,21 +5,7 @@
     </ActionItem>    
     <Label class="action-bar-title|" text="Listado de Productos"></Label>
 </ActionBar>
-<StackLayout backgroundColor="#F5F5F5">
-    <ScrollView orientation="vertical">
-        <WrapLayout width="auto">
-            <WrapLayout orientation="horizontal" width="auto">
-                <DockLayout class="row-prod" *ngFor="let product of productData" width="168" stretchLastChild="false"
-                    (tap)="showProduct(product)">
-                    <StackLayout orientation="vertical" dock="top">
-                        <StackLayout orientation="vertical" width="170">
-                            <Label text="{{ product }}" class="lbl-desc-prod"
-                                textWrap="true"></Label>
-                        </StackLayout>
-                    </StackLayout>
-                </DockLayout>
-            </WrapLayout>
-        </WrapLayout>
-    </ScrollView>
+<StackLayout class="page page-content" orientation="vertical">
+    <Label class="page-placeholder" *ngFor="let item of this.productService.buscar()" [text]="item"></Label>
 </StackLayout>
 

@@ -6,20 +6,22 @@ import { android as androidApp, ios as iosApp } from "tns-core-modules/applicati
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'ns-demo',
+  selector: 'ns-list-product',
   templateUrl: './list-product.component.html',
   styleUrls: ['./list-product.component.scss'],
   moduleId: module.id,
 })
 export class ListProductComponent implements OnInit {
-  public productData : any;
   constructor(private productService: ProductService, private router: Router) {
-    this.productService.agregar('Polo 1');
-    this.productData = this.productService.buscar();
+    
   }
 
-  ngOnInit() {
-  
+  ngOnInit(): void {
+    if (androidApp) {
+      this.productService.agregar("Polo 1");
+      this.productService.agregar("Polo 2");
+      this.productService.agregar("Jean");
+    }
   }
 
   onDrawerButtonTap(): void {
