@@ -6,6 +6,6 @@
     <Label class="action-bar-title|" text="Listado de Productos"></Label>
 </ActionBar>
 <StackLayout class="page page-content" orientation="vertical">
-    <Label class="page-placeholder" *ngFor="let item of this.productService.buscar()" [text]="item"></Label>
+    <Label class="page-placeholder" *ngFor="let item of this.productService.buscar()" [text]="item" (tap)="showProduct(item)"></Label>
 </StackLayout>
 

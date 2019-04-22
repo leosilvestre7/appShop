@@ -1,21 +1,16 @@
 <ActionBar class="action-bar">
-    <NavigationButton text="Go Back" icon="" (tap)="returnPage()"></NavigationButton>
-    <Label class="action-bar-title|" text="Detalle de Producto"></Label>
+  <NavigationButton text="Go Back" icon="res://flecha" (tap)="returnPage()"></NavigationButton>
+  <Label class="action-bar-title|" text="Detalle de Producto"></Label>
 </ActionBar>
 
-<DockLayout stretchLastChild="false" *ngIf="listLoaded">
-    <ScrollView dock="top" orientation="vertical">
-      <StackLayout orientation="vertical">
-        <Label text="{{ productData }}" class="lbl-prod-name" textWrap="true"></Label>
-        <StackLayout orientation="horizontal">
-          <!--Detalle del las img del producto-->
-          <AbsoluteLayout>
-            <StackLayout class="wr-product-image" width="200" orientation=vertical top="10">
-              <img src="https://outcomm.es/wp-content/uploads/2016/04/productos-no-disponibles.jpg">
-            </StackLayout>
-          </AbsoluteLayout>
-        </StackLayout>  
+<StackLayout orientation="vertical">
+  <Label [text]="productData" class="lbl-prod-name" textWrap="true"></Label>
+  <StackLayout orientation="horizontal">
+    <!--Detalle del las img del producto-->
+    <AbsoluteLayout>
+      <StackLayout class="wr-product-image" width="200" orientation=vertical top="10">
+        <img src="https://outcomm.es/wp-content/uploads/2016/04/productos-no-disponibles.jpg" stretch="fill">
       </StackLayout>
-    </ScrollView>
-
-  </DockLayout>
+    </AbsoluteLayout>
+  </StackLayout>
+</StackLayout>

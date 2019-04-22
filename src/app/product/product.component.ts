@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
   constructor(private routerExtensions: RouterExtensions, private activedroute: ActivatedRoute) {
       this.activedroute.params.subscribe(params => {
           this.productData = params.productData;
+          console.log(this.productData);
       });
   }
 
