@@ -18,9 +18,6 @@ export class ListProductComponent implements OnInit {
 
   ngOnInit(): void {
     if (androidApp) {
-      this.productService.agregar("Polo 1");
-      this.productService.agregar("Polo 2");
-      this.productService.agregar("Jean");
     }
   }
 
