@@ -1,0 +1,22 @@
+.row-prod {
+    margin-top: 20;
+    margin-bottom: 3;
+    margin-left: 7;
+    border-radius: 4;
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 4px;
+    border-bottom-width: 2px;
+    border-color: rgba(0,0,0,0.2);
+  }
+
+  .lbl-desc-prod {
+    margin-left: 9px;
+    color: #202124;
+    font-weight: bold;
+    font-size: 15;
+    margin-bottom: 4;
+  }
